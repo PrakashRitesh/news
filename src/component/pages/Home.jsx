@@ -1,13 +1,11 @@
 import { useEffect, useState, React } from "react";
-import Body from "./Atom/Body";
+import Body from "../Atom/Body";
 
 function Home() {
   const [newsData, setNewsData] = useState([]);
   const API_KEY = process.env.REACT_APP_API_KEY;
   useEffect(() => {
-    fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`
-    )
+    fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
       .then((res) => res.json())
       .then((data) => {
         setNewsData(data.articles);
