@@ -1,16 +1,14 @@
 import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
-
+import Header from "./component/Atom/Header";
+import Home from "./component/Home";
 
 function App() {
-   return(
-     <div className="flex flex-col" > 
-      <Header/>
-      < Home />
-
-     </div>
-   )
+  return (
+    <div className="flex flex-col">
+      <Header />
+      <Home />
+    </div>
+  );
 }
 
 export default App;
